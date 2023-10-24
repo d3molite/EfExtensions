@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.1.0</Version>
+        <Title>EfExtensions.Repositories</Title>
+        <Authors>Tobias Brinke</Authors>
+        <Description>Provides implementations for the repository interfaces from the EfExtensions.Core packages.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EfExtensions.Core\EfExtensions.Core.csproj" />
+      <ProjectReference Include="..\EfExtensions.Items\EfExtensions.Items.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.13" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+    
+</Project>

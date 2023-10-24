@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net7.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <RootNamespace>EfExtensions.Items</RootNamespace>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Version>0.1.0</Version>
+        <Title>EfExtensions.Items</Title>
+        <Authors>Tobias Brinke</Authors>
+        <Description>Provides implementations for the item interfaces from the EfExtensions.Core package.</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\EfExtensions.Core\EfExtensions.Core.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <None Include="README.md" Pack="true" PackagePath="\"/>
+    </ItemGroup>
+
+</Project>
