@@ -8,11 +8,21 @@
         <Version>0.1.0</Version>
         <Title>EfExtensions.Core</Title>
         <Authors>Tobias Brinke</Authors>
+        <RepositoryUrl>https://github.com/d3molite/EfExtensions</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageTags>EfCore, EntityFramework</PackageTags>
         <Description>Core package for the EfExtensions Nuget Packages. Provides interfaces and necessary core items.</Description>
     </PropertyGroup>
 
     <ItemGroup>
-        <None Include="README.md" Pack="true" PackagePath="\"/>
+      <None Update="Docs\README.md">
+        <Pack>true</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
-    
+
+    <PropertyGroup>
+        <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    </PropertyGroup>
+
 </Project>
