@@ -57,21 +57,11 @@ class Build : NukeBuild
         .DependsOn(Compile)
         .Executes(() =>
         {
-            const string version = "0.1.0";
-            const string authors = "Tobias Brinke";
-            const string tags = "EntityFramework";
-            
             DotNetPack(s => s
                 .SetProject(Solution.GetProject("EfExtensions.Core"))
                 .SetConfiguration(Configuration)
                 .EnableNoBuild()
                 .EnableNoRestore()
-                .SetVersion(version)
-                .SetAuthors(authors)
-                .SetTitle("EfExtensions.Core")
-                .SetDescription("Core package for the EfExtensions Nuget Packages. Provides interfaces and necessary core items.")
-                .SetPackageTags(tags)
-                .SetNoDependencies(true)
                 .SetOutputDirectory(OutputDirectory));
             
             DotNetPack(s => s
@@ -79,12 +69,6 @@ class Build : NukeBuild
                 .SetConfiguration(Configuration)
                 .EnableNoBuild()
                 .EnableNoRestore()
-                .SetVersion(version)
-                .SetAuthors(authors)
-                .SetTitle("EfExtensions.Items")
-                .SetDescription("Provides implementations for the item interfaces from the EfExtensions.Core package.")
-                .SetPackageTags(tags)
-                .SetNoDependencies(true)
                 .SetOutputDirectory(OutputDirectory));
             
             DotNetPack(s => s
@@ -92,12 +76,6 @@ class Build : NukeBuild
                 .SetConfiguration(Configuration)
                 .EnableNoBuild()
                 .EnableNoRestore()
-                .SetVersion(version)
-                .SetAuthors(authors)
-                .SetTitle("EfExtensions.Repositories")
-                .SetDescription("Provides implementations for the repository interfaces from the EfExtensions.Core packages.")
-                .SetPackageTags(tags)
-                .SetNoDependencies(true)
                 .SetOutputDirectory(OutputDirectory));
         });
 }

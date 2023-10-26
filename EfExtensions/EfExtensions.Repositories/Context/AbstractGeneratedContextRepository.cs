@@ -19,4 +19,9 @@ public abstract class AbstractGeneratedContextRepository<T, TKey, TContext> : Ab
     {
         return _dbContextFactory.CreateDbContext();
     }
+
+    protected override async Task<TContext> GetContextAsync()
+    {
+        return await _dbContextFactory.CreateDbContextAsync();
+    }
 }

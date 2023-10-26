@@ -1,6 +1,6 @@
 ﻿namespace EfExtensions.Core.Interfaces.Repository;
 
-public interface IBaseKeyedRepository<T, in TKey>
+public interface IBaseKeyedRepository<T, in TKey> : IBaseRepository<T>
 {
     /// <summary>
     /// Tries to find an item with the matching Id.

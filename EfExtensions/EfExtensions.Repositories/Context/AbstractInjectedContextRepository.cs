@@ -18,4 +18,9 @@ public abstract partial class AbstractInjectedContextRepository<T, TContext> : B
     {
         return _dbContext;
     }
+
+    protected override async Task<TContext> GetContextAsync()
+    {
+        return await Task.Run(GetContext);
+    }
 }
